@@ -6,9 +6,6 @@
     <title>Neighborhood Map</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/styles.css">
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.1/knockout-min.js"></script>
-
 </head>
 <body>
 
@@ -16,8 +13,7 @@
 
     <div class="row">
 
-        <div class="col-lg-4">
-
+        <main class="col-lg-4">
             <h1>Locations</h1>
 
             <div id="loading_map_error" class="alert alert-danger" role="alert">
@@ -30,24 +26,23 @@
 
             <p></p>
 
-
             <div class="list-group" data-bind="foreach: filteredLocations">
                 <a href="#" class="list-group-item" data-bind="text: name, click: $parent.itemClick"></a>
             </div>
-        </div>
 
-        <div class="col-lg-8">
+        </main>
+
+        <aside class="col-lg-8">
             <div id="map"></div>
-        </div>
-
+        </aside>
     </div>
-
 </div>
 
-
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.1/knockout-min.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
 <script type="text/javascript" src="js/app.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCANKwpIZloGnt1qLmJtOVqGsYi_geZsNk&callback=initMap" async defer onerror="mapErrorHandler()"></script>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCANKwpIZloGnt1qLmJtOVqGsYi_geZsNk&callback=initMap" async defer></script>
 </body>
 </html>
